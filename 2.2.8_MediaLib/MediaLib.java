@@ -8,6 +8,7 @@ public class MediaLib
 {
   private Book book;
   private Movie movie;
+  private Song song;
 
   public void addBook(Book b)
   {
@@ -18,6 +19,10 @@ public class MediaLib
   {
     movie = m;
   }
+  public void addSong(Song s)
+  {
+    song = s;
+  }
 
   public String toString() 
   {
@@ -27,6 +32,8 @@ public class MediaLib
       info += "Book: " + book + "\n";
     if (movie != null)
       info += "Movie: " + movie + "\n";
+    if (book != null)
+      info += "Song: " + song + "\n";
  
     return info;
   }

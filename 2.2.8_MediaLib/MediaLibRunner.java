@@ -13,6 +13,8 @@ public class MediaLibRunner
     myLib.addBook(myBook);
     Movie myMovie1 = new Movie("Young Frankenstein", 1.75);
     myLib.addMovie(myMovie1);
+    Song mySong1 = new Song("Passion Fruit", 10, "Drake");
+    myLib.addSong(mySong1);
 
     System.out.println("Library:\n" + myLib);
 
@@ -21,5 +23,11 @@ public class MediaLibRunner
     System.out.println("Movies are the same: " + myMovie1.equals(myMovie2)); //Expect 'true'
     myMovie2.setTitle("Frankenstein");
     System.out.println("Movies are the same: " + myMovie1.equals(myMovie2)); //Expect 'false'
+
+    Song mySong2 = new Song("Passion Fruit", 10, "Drake");
+    System.out.println("Songs are the same: " + mySong1.equals(mySong2)); //Sould be ture
+    mySong1.setTitle("Teenage Fever");
+    System.out.println("Songs are the same: " + mySong1.equals(mySong2)); //Sould be false
+    System.out.println(mySong1.toString());
   }
 }
